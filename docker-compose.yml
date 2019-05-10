@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:80"
+      - "9229:9229"
+    depends_on:
+      - "mongo"
+    volumes:
+      - type: "bind"
+        source: "./ggNext"
+        target: "/app/ggNext"
+    environment:
+      - "GGNEXT_ENV=${GGNEXT_ENV}"
+
+  mongo:
+    image: "mongo"
+    restart: "always"

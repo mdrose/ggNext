@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  justify-content: center;
+  background-color: #DDD;
+  color: #444;
+}
+
+.col {
+  flex-grow: 2;
+  flex-basis: 0;
+  text-align: center;
+}
+
+.button {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}

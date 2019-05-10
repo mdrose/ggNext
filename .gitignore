@@ -1,0 +1,4 @@
+ggNext/client/*.js
+ggNext/node_modules
+dev.settings
+prod.settings
