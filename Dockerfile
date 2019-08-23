@@ -1,4 +1,4 @@
-FROM node:10.15.3
+FROM node:10.16.3
 COPY /package.json /package-lock.json /dev.settings /app/
 WORKDIR /app
 RUN npm ci
