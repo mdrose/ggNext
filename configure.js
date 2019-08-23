@@ -18,7 +18,7 @@ const textFriendlyEnv = Object.freeze({
 
 const variableDefaults = Object.freeze({
   [`GGNEXT_${type.toUpperCase()}_MONGODB_DBNAME`]: 'ggnext',
-  [`GGNEXT_${type.toUpperCase()}_MONGODB_URI`]: 'mongodb://mongo:27017/$GGNEXT_DEV_MONGODB_DBNAME',
+  [`GGNEXT_${type.toUpperCase()}_MONGODB_URI`]: 'mongodb://mongo:27017/',
   [`GGNEXT_${type.toUpperCase()}_URL`]: 'http://localhost:5000/',
 })
 
