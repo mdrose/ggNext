@@ -15,5 +15,5 @@ services:
       - "GGNEXT_ENV=${GGNEXT_ENV}"
 
   mongo:
-    image: "mongo"
+    image: "mongo:4.2"
     restart: "always"
