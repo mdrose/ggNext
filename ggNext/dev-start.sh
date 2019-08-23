@@ -15,5 +15,5 @@ elif [ "$GGNEXT_ENV" = "test" ]; then
     export GGNEXT_MONGODB_URI=$GGNEXT_DEV_MONGODB_URI$GGNEXT_MONGODB_DBNAME
     echo "Running tests"
     npx jest --detectOpenHandles --coverage
-    mongo $GGNEXT_MONGODB_URI -eval "db.dropDatabase()"
+    mongoshell/bin/mongo $GGNEXT_MONGODB_URI -eval "db.dropDatabase()"
 fi
