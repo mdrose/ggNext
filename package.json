@@ -7,6 +7,7 @@
     "build": "npx babel client/src --out-dir client --presets @babel/preset-react",
     "configure": "node configure.js",
     "start": "node app.js",
+    "dev": "node start_dev_env.js dev",
     "test": "node start_dev_env.js test"
   },
   "author": "Michael Rose",
