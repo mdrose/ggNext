@@ -32,6 +32,13 @@ function launchContainers(superuser=false) {
 
   dockerProcess.stdout.on('data', (chunk) => console.log(chunk))
   dockerProcess.stderr.on('data', (chunk) => console.log(chunk))
+
+  return dockerProcess
 }
 
-launchContainers()
+const docker = launchContainers()
+
+process.on('SIGINT', () => {
+  docker.kill('SIGINT')
+  process.exitCode = 0
+})
