@@ -185,6 +185,12 @@ app.get('/channel/:channel/myPosition', nightBotSetup, checkValidKey, function(r
 app.use(loginRedirect)
 app.use('/channel/:channel/', checkValidAuth)
 
+app.get('/', function (req, res) {
+  if (req.session.userName != null) {
+    res.redirect(`/channel/${req.session.userName}/queue/view`)
+  }
+})
+
 app.get('/channel/:channel/queue', function (req, res) {
   const channel = req.params.channel
   db.getChannelDocument(channel)
