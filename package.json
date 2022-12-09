@@ -13,7 +13,7 @@
   "author": "Michael Rose",
   "license": "AGPL-3.0-only",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mongodb": "^3.2.2",
     "got": "^9.6.0",
     "express-session": "^1.15.6",
